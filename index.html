@@ -5,11 +5,13 @@
         <title>PhobiaDeflector</title>
         <meta name="description" content="Download free Bootstrap 4 product landing page template Comply." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="img/pd.png">
         <!--Bootstrap 4-->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <!--icons-->
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+		<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/abemchjikcoolecopifmheehconhmodb">
     </head>
     <body>
         <!--header-->
@@ -47,16 +49,16 @@
             <div class="container">
                 <div class="row d-md-flex brand">
                     <div class="col-md-6 hidden-sm-down wow fadeIn">
-                        <img class="img-fluid mx-auto d-block" src="img/comply.jpg" style="height:400px;width:960px"/>
+                        <img class="img-fluid mx-auto d-block" src="img/snake1.jpg" style="height:400px;width:960px"/>
                     </div>
                     <div class="col-md-6 col-sm-12 text-white wow fadeIn">
-                        <h2 class="pt-4">Experience <b class="text-primary-light">Real Time Phobia-Inducing Image Filtering </b> With PhobiaDeflector</h2>
+                        <h2 class="pt-4">Experience <b class="text-primary-light">Real Time A.I Filtering Of Phobia-Inducing Images(i.e Snakes and Spiders) </b> <br>With PhobiaDeflector</h2>
                         <p class="mt-5">
-                            The best gets even better. With 10 years of improvements to the code base, and dozens of major implementations, V5 brings further quality and performance advancements.
+                            The Evolution Of Artificial Intelligence, An A.I Trained Image Recognition Model that is installed right in your browser, automatically filtering unwanted images for you.
                         </p>
                         <p class="mt-5">
-                            <a href="#pricing" class="btn btn-primary mr-2 mb-2 page-scroll">Buy Now</a>
-                            <a href="#download" class="btn btn-white mb-2 page-scroll">Download Chrome Extension</a>
+                            <!-- <a href="#pricing" class="btn btn-primary mr-2 mb-2 page-scroll">Install</a> -->
+                            <a href="#download" onclick="chrome.webstore.install()" id="install-button" class="btn btn-white mb-4 page-scroll">INSTALL PHOBIADEFLECTOR</a>
                         </p>
                     </div>
                 </div>
@@ -161,20 +163,20 @@
             <div class="container-fluid">
                 <div class="row d-md-flex mt-5">
                     <div class="col-sm-6 p-0 wow fadeInLeft">
-                        <img class="img-fluid" src="img/comply.jpg" alt="Gallery" style="height:605px">
+                        <img class="img-fluid" src="img/phobia.jpg" alt="Gallery" style="height:580px">
                     </div>
                     <div class="col-sm-6 pl-5 pr-5 pt-5 pb-4 wow fadeInRight">
                         <h3><a href="#">What You Get with Phobia Deflector in Version 1.0?</a></h3>
                         <p class="lead pt-4">These are some of the stunning features and functionalities you will get while using Phobia Deflector.</p>
                         <ul class="pt-4 pb-3 list-default">
-                            <li>An Image Recognition Filter For Detection Of Phobia-Inducing Images.</li>
+                            <li>An Image Recognition Filter For Detection Of Phobia-Inducing Images like Snakes and Spiders.</li>
                             <li>A Filter Check Box For Selecting Type Of Images To Filter Against.</li>
                             <li>Notifications To Indicate Saved Data.</li>
                             <li>Speedy Blocking Of Images.</li>
                             <li>Constant Background Filtering of Images Upon Installation.</li>
 							<li>Runs And Filters Images On All Web-Sites.</li>
                         </ul>
-                        <a href="#purchase" class="btn btn-primary mr-2 page-scroll">Get Started with PhobiaDeflector</a>
+                        <a href="#purchase" onclick="chrome.webstore.install()" id="install-button2" class="btn btn-primary mr-2 page-scroll">Get Started with PhobiaDeflector</a>
                     </div>
                 </div>
             </div>
@@ -220,7 +222,7 @@
                                     <li>1GB bandwidth</li>
                                     <li>Basic support</li>
                                 </ul> -->
-                                <a href="#" class="btn btn-primary btn-radius">Install Now</a>
+                                <a href="#" onclick="chrome.webstore.install()" id="install-button3" class="btn btn-primary btn-radius">Install Now</a>
                             </div>
                         </div>
                     </div>
@@ -405,7 +407,15 @@
                 </div>
             </div>
         </section>
-
+		
+		
+		<script>
+			if (chrome.app.isInstalled) {
+				document.getElementById('install-button').style.display = 'none';
+				document.getElementById('install-button2').style.display = 'none';
+				document.getElementById('install-button3').style.display = 'none';
+			}
+		</script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
